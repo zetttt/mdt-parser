@@ -1,0 +1,25 @@
+{
+  "name": "mdt-parser",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --import ./register.js src/app.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/pako": "^2.0.3",
+    "fengari": "^0.1.4",
+    "pako": "^2.1.0",
+    "typescript": "^5.7.2",
+    "wasmoon": "^1.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.3",
+    "ts-node": "^10.9.2"
+  }
+}
