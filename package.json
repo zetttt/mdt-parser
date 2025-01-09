@@ -13,10 +13,9 @@
   "description": "",
   "dependencies": {
     "@types/pako": "^2.0.3",
-    "fengari": "^0.1.4",
+    "luaparse": "^0.3.1",
     "pako": "^2.1.0",
-    "typescript": "^5.7.2",
-    "wasmoon": "^1.16.0"
+    "typescript": "^5.7.2"
   },
   "devDependencies": {
     "@types/node": "^22.10.3",
