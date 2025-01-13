@@ -39,9 +39,12 @@ function main() {
 
     // 查找装备数据
     const foundItems = {};
+    const notFoundIds = []; // 新增
     itemIds.forEach(id => {
       if (itemsData[id]) {
         foundItems[id] = itemsData[id];
+      } else {
+        notFoundIds.push(id); // 新增
       }
     });
 
@@ -56,7 +59,8 @@ function main() {
     // 构造输出字符串
     const output = JSON.stringify(bossData, null, 2) + 
       '\n// 总计装备ID: ' + itemIds.size + 
-      '\n// 找到装备数: ' + Object.keys(foundItems).length + '\n' +
+      '\n// 找到装备数: ' + Object.keys(foundItems).length +
+      (notFoundIds.length ? '\n// 未找到ID: ' + notFoundIds.join(', ') : '') + '\n' +
       JSON.stringify(foundItems, null, 2).replace(/"classes":\s*{\s*([^}]+)\s*}/g, 
         (_, p1) => `"classes": { ${p1.replace(/\s+/g, ' ').trim()} }`);
 
